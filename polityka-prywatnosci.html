@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Polityka prywatności – Stowarzyszenie Malakologów Polskich</title>
+    <meta name="description" content="Polityka prywatności Stowarzyszenia Malakologów Polskich. Informacje o przetwarzaniu danych osobowych, plikach cookies oraz prawach użytkownika.">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Canonical -->
+    <link rel="canonical" href="https://malakologia.org/polityka-prywatnosci.html">
+
+	<link rel="alternate" hreflang="pl" href="https://malakologia.org/polityka-prywatnosci.html">
+    <link rel="alternate" hreflang="en" href="https://malakologia.org/privacy-policy.html">
+
+    <!-- Open Graph (social media) -->
+    <meta property="og:title" content="Stowarzyszenie Malakologów Polskich">
+    <meta property="og:description" content="Zasady przetwarzania danych osobowych i plików cookies na stronie Stowarzyszenia Malakologów Polskich.">
+    <meta property="og:url" content="https://malakologia.org/polityka-prywatnosci.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:locale:alternate" content="en_US">
+	<meta property="og:image" content="https://malakologia.org/og.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stowarzyszenie Malakologów Polskich">
+    <meta name="twitter:image" content="https://malakologia.org/og.jpg">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+ <style>
+
+/* ========================= */
+/* OGÓLNY STYL, FADE-IN */
+/* ========================= */
+
+body {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #1c2a38;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+header img {
+    max-width: 1300px;		/* SZEROKOŚĆ banera */
+    width: 90%;				/* responsywność */
+    height: 180px;			/* WYSOKOŚĆ banera */
+    object-fit: cover;		/* przycina obraz estetycznie */
+    border-radius: 16px;	/* zaokrąglone rogi */
+    box-shadow: 0 8px 18px rgba(10,25,50,0.25);		/* lekki cień */
+    display: block;
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+#container {
+    display: flex;
+    max-width: 1200px;
+    margin: 24px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(10,25,50,0.08);
+    overflow: hidden;
+}
+
+/* ========================= */
+/* NAV – CIEMNY PANEL */
+/* ========================= */
+
+nav {
+    width: 230px;
+    background: linear-gradient(180deg, #0f2742, #16385c);
+    padding: 22px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+nav h2 {
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 9px 12px;
+    text-decoration: none;
+    color: #e6edf5;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.2s, transform 0.15s;
+}
+
+nav ul li a.active {
+    background: rgba(255,255,255,0.18);
+    box-shadow: inset 0 0 0 2px #3a6ea5;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateX(2px);
+}
+
+ /* ========================= */
+ /* TEKSTY I DODATKI */
+ /* ========================= */
+
+ .banner-caption {
+     text-align: center;
+     font-style: italic;
+     font-size: 14px;
+     color: #5f7286;
+     padding: 8px 0 14px 0;
+     background: #eef3f9;
+     border-bottom: 1px solid #d2dce7;
+}
+
+.center-text {
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 34px;
+}
+
+.seo-note {
+    font-size: 15px;
+    color: #5f7286;
+}
+
+/* ========================= */
+/* BANER / SLIDER */
+/* ========================= */
+
+.banner-wrapper {
+    position: relative;
+    max-width: 1300px;
+    width: 90%;
+    height: 180px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(10,25,50,0.25);
+}
+
+/* wszystkie zdjęcia na siebie */
+.banner-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* aktywne zdjęcie */
+.banner-wrapper img.active {
+    opacity: 1;
+}
+
+/* ========================= */
+/* NAPIS NA BANERZE */
+/* ========================= */
+
+.banner-title {
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+
+    background: rgba(10, 25, 50, 0.45);
+    border-radius: 6px;
+    backdrop-filter: blur(3px);
+
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+
+    opacity: 0;
+    animation: fadeTitle 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeTitle {
+    to { opacity: 1; }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .banner-wrapper {
+        height: 120px;
+    }
+
+    .banner-title {
+        font-size: 16px;
+        bottom: 10px;
+        left: 12px;
+        padding: 4px 10px;
+    }
+}
+
+
+
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+    background: #e6edf5;
+    color: #5f7286;
+}
+
+/* ========================= */
+/* LANGUAGE SWITCH */
+/* ========================= */
+
+.lang-switch {
+    display: flex;
+    justify-content: center;		/* wyśrodkowane w menu */
+    gap: 30px;						/* odstęp między flagami */
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    color: #cfddee;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.lang-switch a.active {
+    opacity: 1;
+    font-weight: 600;
+}
+
+ /* Efekt hover tylko dla linków nieaktywnych */
+ .lang-switch a:not(.active):hover {
+     opacity: 1;
+     transform: translateY(-2px) scale(1.1);
+ }
+
+ .lang-switch a img {
+     width: 24px;
+     height: auto;
+     transition: transform 0.2s, filter 0.2s;
+ }
+
+ /* Efekt hover dla obrazka tylko w nieaktywnym linku */
+ .lang-switch a:not(.active):hover img {
+     transform: translateY(-2px) scale(1.1);
+     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+ }
+
+ /* Aktywny link - statyczny */
+ .lang-switch a.active {
+     opacity: 1;
+     font-weight: 600;
+     cursor: default;
+     transform: none;
+ }
+
+ .lang-switch a:not(.active) {
+     cursor: pointer; /* łapka tylko przy linku który można kliknąć */
+ }
+
+
+/* ========================= */
+/* WELCOME */
+/* ========================= */
+
+.welcome {
+    margin-bottom: 42px;
+    max-width: 820px;
+}
+
+.welcome h1 {
+    margin-top: 0;
+    font-size: 30px;
+    color: #0f2742;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.welcome h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #1f4e79, #c9d9ea);
+    border-radius: 2px;
+}
+
+.welcome p {
+    line-height: 1.7;
+    font-size: 17px;
+    color: #2c3e50;
+}
+
+/* ukryta część welcome */
+.welcome-more {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* ukryty fragment w pierwszym akapicie */
+.welcome-extra {
+    display: none;
+}
+
+/* po rozwinięciu */
+.welcome.expanded .welcome-more {
+    max-height: 500px;
+}
+
+.welcome.expanded .welcome-extra {
+    display: inline;
+}
+
+/* przycisk */
+.welcome-toggle {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #3a6ea5;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.welcome-toggle:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        margin: 15px 0;
+    }
+
+    header img {
+        height: 120px;
+        border-radius: 14px;
+    }
+
+    #container {
+        flex-direction: column;
+        margin: 10px;
+        border-radius: 8px;
+    }
+
+    nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d2dce7;
+        padding: 16px;
+    }
+
+    nav h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .lang-switch {
+        gap: 20px;
+        margin: 10px 0 16px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .sections {
+        gap: 18px;
+    }
+
+    .section-box img {
+        height: 140px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 14px;
+        line-height: 1.6;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 4px 6px;
+    }
+
+    /* hamburger button */
+	.menu-toggle {
+	    display: block;
+	    background: #0f2742;
+	    color: #fff;
+	    border: none;
+	    width: 100%;
+	    padding: 12px 16px;
+	    font-size: 16px;
+	    font-weight: 600;
+	    text-align: left;
+	    border-radius: 6px;
+	    margin-bottom: 12px;
+	    cursor: pointer;
+	}
+
+	.menu-toggle:focus {
+	    outline: 2px solid #3a6ea5;
+	}
+
+	/* na mobile domyślnie ukryj menu ul */
+	nav ul {
+	    display: none;
+	    flex-direction: column;
+	    gap: 8px;
+	}
+
+	/* po kliknięciu pokaż menu */
+	nav ul.show {
+	    display: flex;
+}
+    nav h2 {
+        display: none;
+    }
+
+}
+
+
+    </style>
+</head>
+<body>
+
+
+<header>
+    <div class="banner-wrapper">
+
+        <img src="baner/baner1.jpg" class="active" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner2.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner3.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner4.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner5.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner6.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner7.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner8.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner9.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner10.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner11.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner12.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner13.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner14.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner15.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner16.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner17.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner18.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner19.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner20.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+
+        <div class="banner-title">
+            Stowarzyszenie Malakologów Polskich
+        </div>
+
+    </div>
+</header>
+
+
+
+<div id="container">
+
+
+    <nav>
+
+<button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+    ☰ Menu
+</button>
+
+    <div class="lang-switch">
+		    <a href="polityka-prywatnosci.html" class="active" title="Polski">
+		        <img src="flag-pl.svg" alt="PL"> <span>PL</span>
+		    </a>
+		    <a href="privacy-policy.html" title="English">
+		        <img src="flag-en.svg" alt="EN"> <span>EN</span>
+	    </a>
+</div>
+
+<h2>Menu</h2>
+<ul>
+    <li><a href="index.html">Strona startowa</a></li>
+    <li><a href="stowarzyszenie.html">Stowarzyszenie</a></li>
+    <li><a href="krajowe-seminaria-malakologiczne.html">Krajowe Seminaria Malakologiczne</a></li>
+    <li><a href="publikacje.html">Publikacje</a></li>
+    <li><a href="projekty.html">Projekty</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="linki.html">Linki</a></li>
+    <li><a href="klucz-do-oznaczania.html">Klucz do oznaczania</a></li>
+    <li><a href="mieczaki-polski.html">Mięczaki Polski</a></li>
+</ul>
+
+    </nav>
+
+
+    <main>
+
+        <section class="welcome">
+            <h1>Polityka prywatności i plików cookies</h1>
+<p>Na tej stronie znajdują się informacje o tym, jakie dane są zbierane i w jaki sposób są wykorzystywane, zgodnie z obowiązującymi przepisami o ochronie danych osobowych.</p>
+
+
+<h2>Polityka przetwarzania danych osobowych Stowarzyszenia Malakologów Polskich</h2>
+
+<ol>
+
+<li>Administratorem danych osobowych jest Stowarzyszenie Malakologów Polskich (SMP), pozarządowa organizacja naukowa z siedzibą w Poznaniu,
+pod adresem: 61-614 Poznań, ul Umultowska 89, email do członków zarządu: <a href="mailto:anna.labecka@uj.edu.pl">anna.labecka@uj.edu.pl</a> (prezes),
+<a href="mailto:office@a.jaszczynska@uj.edu.pl">a.jaszczynska@uj.edu.pl</a> (skarbnik).</li>
+<li>Niniejsza Polityka Prywatności reguluje ochronę danych osobowych oraz innych danych niebędących danymi osobowymi, które pozyskujemy od członków
+SMP (dane osobowe oznaczają informacje, które same w sobie lub w powiązaniu z innymi danymi, pozwalają zidentyfikować osobę np. imię i nazwisko w powiązaniu
+z adresem zamieszkania lub miejscem zatrudnienia (art. 4 ust. 1 ogólnego rozporządzenia o ochronie danych osobowych RODO). Dane osobowe członków SMP są przetwarzane
+wyłącznie w sposób i w zakresie zgodnym z przepisami prawa.</li>
+<li>Podstawę prawną przetwarzania danych osobowych przez SMP stanowi art. 6 ust. 1 lit. c, f RODO.</li>
+<li>Stowarzyszenie Malakologów Polskich może gromadzić następujące informacje:</li>
+	<ol type="a">
+		<li>imię i nazwisko członka SMP</li>
+		<li>adres zamieszkania osoby prywatnej lub nazwę, NIP i adres instytucji zatrudniającej członka SMP</li>
+		<li>adres e-mail członka SMP</li>
+		<li>numer telefonu członka SMP</li>
+		<li>korespondencja członków SMP z władzami Stowarzyszenia</li>
+		</ol>
+<li>Dane osobowe są zbierane i przetwarzane ręcznie w celu pełnienia statutowych obowiązków SMP, związanych z:</li>
+	<ol type="a">
+		<li>informowaniem o odbywających się konferencjach naukowych i bieżących pracach SMP;</li>
+		<li>informowaniem o walnych zebraniach SMP i decyzjach władz SMP;</li>
+		<li>pobieraniem składek członkowskich od członków SMP.</li>
+		</ol>
+
+<li>Zbierane dane osobowe są przekazywane przez członków SMP podczas wstępowania w jego szeregi.</li>
+<li>SMP nie udostępnia danych innym podmiotom, chyba, że zostały zawarte z członkami dodatkowe ustalenia w tym zakresie.</li>
+<li>Zgromadzone dane są przechowywane w bazie danych w pakiecie MS Office.</li>
+<li>Dane osobowe przechowywane są do czasu skreślenia osoby z listy członków SMP.</li>
+<li>Dane osobowe przechowywane są zgodnie z obowiązującym prawem, w szczególności zgodnie z przepisami ustawy o ochronie danych osobowych oraz zgodnie z
+ogólnym rozporządzeniem o ochronie danych, przy uwzględnieniu następujących reguł:</li>
+
+	<ol type="a">
+<li>Reguła adekwatności – przetwarzane są tylko te dane, które są niezbędne dla osiągnięcia danego celu przetwarzania;</li>
+<li>Reguła transparentności – członkowie SMP maję pełną informację, co dzieje się z ich danymi;</li>
+<li>Reguła prawidłowości – przechowywane dane osobowe są aktualne i zgodne z prawdą. Członkowie SMP mają możliwość aktualizacji danych w przypadku stwierdzenia ich nieprawidłowości;</li>
+<li>Reguła integralności i poufności - stosowane są niezbędne środki zabezpieczające poufność i integralność danych osobowych; zabezpieczenia obejmują środki fizyczne i
+technologiczne ograniczające dostęp do danych i zabezpieczające przed ich utratą;</li>
+<li>Reguła rozliczalności - w razie zapytania, możliwe jest udzielenie pełnej i rzetelnej informacji dotyczącej tego jakie działania są realizowane na przechowywanych
+danych osobowych.</li>
+
+</ol>
+
+<li>Administrator dokłada wszelkich starań, aby zapewnić wszelkie środki fizycznej, technicznej i organizacyjnej ochrony danych osobowych przed ich przypadkowym
+czy umyślnym zniszczeniem, przypadkową utratą, zmianą, nieuprawnionym ujawnieniem, wykorzystaniem czy dostępem, zgodnie ze wszystkimi obowiązującymi przepisami.</li>
+<li>W związku z przetwarzaniem danych osobowych członkom SMP przysługują następujące uprawnienia:</li>
+	<ol type="a">
+	<li>prawo do sprostowania danych – poprawienie błędnych, niepełnych lub nieaktualnych danych osobowych;</li>
+	<li>prawo do częściowego lub całkowitego usunięcia danych („prawo do bycia zapomnianym”) – usunięcie danych przetwarzanych bez uzasadnionych podstaw prawnych;</li>
+	<li>prawo do ograniczenia przetwarzania danych wyłącznie do ich przechowywania;</li>
+	<li>prawo dostępu do danych – uzyskanie informacji o celu i sposobie przetwarzania danych, uzyskanie dostępu do kopii danych;</li>
+	<li>prawo do przenoszenia danych – wskazanie innego administratora, któremu powinniśmy przekazać dane, jeśli jest to technicznie możliwe;</li>
+	<li>prawo do sprzeciwu wobec przetwarzania danych;</li>
+	<li>prawo do wycofania zgody – w każdej chwili członkowie SMP mogą wycofać każdą zgodę uprzednio nam udzieloną.</li>
+</ol>
+
+Z uprawnień tych można skorzystać wysyłając wiadomość na adres: <a href="mailto:anna.labecka@uj.edu.pl">anna.labecka@uj.edu.pl</a>, <a href="mailto:office@a.jaszczynska@uj.edu.pl">a.jaszczynska@uj.edu.pl</a>
+<li>W przypadku uznania, że dane są przetwarzane z naruszeniem przepisów prawa, istnieje możliwość wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych</li>
+
+
+
+
+</ol>
+
+
+<h2>Pliki cookies</h2>
+<ul>
+
+<li>Strona wykorzystuje pliki cookies w celu zapewnienia prawidłowego działania oraz analizy ruchu.</li>
+<li>Użytkownik może zarządzać ustawieniami cookies w swojej przeglądarce lub je całkowicie wyłączyć.</li>
+</ul>
+
+
+
+<h2>Kontakt</h2>
+<p>W sprawach związanych z danymi osobowymi można kontaktować się
+pod adresem: <a href="mailto:office@malakologia.org">office@malakologia.org</a>,
+<a href="mailto:anna.labecka@uj.edu.pl">anna.labecka@uj.edu.pl</a>,
+<a href="mailto:office@a.jaszczynska@uj.edu.pl">a.jaszczynska@uj.edu.pl</a>
+
+
+
+
+
+        </section>
+
+
+
+    </main>
+</div>
+
+<footer>
+    © 2026 Stowarzyszenie Malakologów Polskich – wszystkie prawa zastrzeżone |
+	    <a href="kontakt.html">Kontakt</a>  |
+	    <a href="polityka-prywatnosci.html">Polityka prywatności</a> |
+	    <a href="regulamin.html">Regulamin</a> |
+
+</footer>
+
+
+
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        const isShown = navMenu.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', isShown);
+    });
+}
+
+</script>
+
+
+
+<script>
+/* ========================= */
+/* SLIDER BANERA */
+/* ========================= */
+
+
+const images = document.querySelectorAll('.banner-wrapper img');
+let index = 0;
+
+if (images.length > 0) {
+    setInterval(() => {
+        images[index].classList.remove('active');
+        index = (index + 1) % images.length;
+        images[index].classList.add('active');
+    }, 4000);
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>

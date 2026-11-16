@@ -711,6 +711,120 @@ td img {
 
 }
 
+/* ========================= */
+/* MARKERY ŚLIMAKÓW */
+/* ========================= */
+
+.custom-snail-marker {
+    background: transparent;
+    border: none;
+}
+
+.snail-marker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snail-marker-icon {
+    width: 32px;
+    height: 32px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.35);
+}
+
+.snail-marker-year {
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #0f2742;
+
+    background: rgba(255,255,255,0.92);
+
+    padding: 1px 5px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* domyślnie */
+
+.snail-marker-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* rok */
+
+.snail-marker-year {
+    position: absolute;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    background: rgba(255,255,255,0.92);
+
+    padding: 1px 5px;
+    border-radius: 999px;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+}
+
+/* pierwszy marker */
+
+.overlap-0 .snail-marker-year {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* drugi marker */
+
+.overlap-1 .snail-marker-year {
+    right: -22px;
+    top: 8px;
+}
+
+/* trzeci marker */
+
+.overlap-2 .snail-marker-year {
+    left: -22px;
+    top: 8px;
+}
+
+/* czwarty marker */
+
+.overlap-3 .snail-marker-year {
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* przesunięcie całych markerów */
+
+.overlap-1 {
+    transform: translateX(12px);
+}
+
+.overlap-2 {
+    transform: translateX(-12px);
+}
+
+.overlap-3 {
+    transform: translateY(-12px);
+}
 
     </style>
 </head>
@@ -721,25 +835,25 @@ td img {
     <div class="banner-wrapper">
 
         <img src="baner/baner1.jpg" class="active" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner2.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner3.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner4.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner5.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner6.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner7.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner8.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner9.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner10.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner11.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner12.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner13.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner14.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner15.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner16.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner17.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner18.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner19.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
-        <img src="baner/baner20.jpg" alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner2.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner3.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner4.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner5.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner6.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner7.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner8.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner9.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner10.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner11.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner12.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner13.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner14.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner15.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner16.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner17.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner18.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner19.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
+        <img src="baner/baner20.jpg" loading="lazy"alt="Panoramiczny baner ze zdjęciami mięczaków">
 
         <div class="banner-title">
             Stowarzyszenie Malakologów Polskich
@@ -820,7 +934,7 @@ Interaktywna mapa seminariów oraz książki abstraktów.
     © 2026 Stowarzyszenie Malakologów Polskich – wszystkie prawa zastrzeżone |
 	    <a href="kontakt.html">Kontakt</a>  |
 	    <a href="polityka-prywatnosci.html">Polityka prywatności</a> |
-	    <a href="regulamin.html">Regulamin</a> |
+	    <a href="regulamin.html">Regulamin</a>
 
 </footer>
 
@@ -1018,7 +1132,739 @@ const seminariaData = [
 	    "seminaria/35KSM-04.jpg",
 	    "seminaria/35KSM-05.jpg"
 ]
+},
+
+{
+    id: "XXXIII KSM",
+    nazwa: "XXXIII KSM",
+    rok: "2017",
+    miejsce: "Kraków",
+    lat: 50.073298,
+    lng: 19.944871,
+
+    logo: "seminaria/33KSMlogo.jpg",
+    ksiazka: "seminaria/33KSMksiazka.jpg",
+    pdf: "pdf/33Euromal_Abstract Book.pdf",
+
+    opis: "XXXIII Seminarium odbyło się w Krakowie, w ramach ósmego Europejskiego Kongresu Towarzystwa Malakologicznego - Euromal, w dniach 10-14 września 2017 roku.",
+    galeria: [
+	    "seminaria/33KSM-01.jpg",
+	    "seminaria/33KSM-02.jpg",
+	    "seminaria/33KSM-03.jpg",
+	    "seminaria/33KSM-04.jpg",
+	    "seminaria/33KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXII KSM",
+    nazwa: "XXXII KSM",
+    rok: "2016",
+    miejsce: "Spała",
+    lat: 51.542406,
+    lng: 20.137557,
+
+    logo: "seminaria/32KSMlogo.jpg",
+    ksiazka: "seminaria/32KSMksiazka.jpg",
+    pdf: "pdf/32KSM.pdf",
+
+    opis: "XXXII Seminarium odbyło się w Spale, w dniach 13-15 października 2016 roku.",
+    galeria: [
+	    "seminaria/32KSM-01.jpg",
+	    "seminaria/32KSM-02.jpg",
+	    "seminaria/32KSM-03.jpg",
+	    "seminaria/32KSM-04.jpg",
+	    "seminaria/32KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXI KSM",
+    nazwa: "XXXI KSM",
+    rok: "2015",
+    miejsce: "Wieliczka",
+    lat: 49.983421,
+    lng: 20.054672,
+
+    logo: "seminaria/31KSMlogo.jpg",
+    ksiazka: "seminaria/31KSMksiazka.jpg",
+    pdf: "pdf/31KSM.pdf",
+
+    opis: "XXXI Seminarium odbyło się w Wieliczce, w dniach 22-25 wrzesnia 2015 roku.",
+    galeria: [
+	    "seminaria/31KSM-01.jpg",
+	    "seminaria/31KSM-02.jpg",
+	    "seminaria/31KSM-03.jpg",
+	    "seminaria/31KSM-04.jpg",
+	    "seminaria/31KSM-05.jpg"
+]
+},
+
+{
+    id: "XXX KSM",
+    nazwa: "XXX KSM",
+    rok: "2014",
+    miejsce: "Łopuszna",
+    lat: 49.499487,
+    lng: 20.136544,
+
+    logo: "seminaria/30KSMlogo.jpg",
+    ksiazka: "seminaria/30KSMksiazka.jpg",
+    pdf: "pdf/30KSM.pdf",
+
+    opis: "XXX Seminarium odbyło się w Łopusznej, w dniach 8-10 października 2014 roku.",
+    galeria: [
+	    "seminaria/30KSM-01.jpg",
+	    "seminaria/30KSM-02.jpg",
+	    "seminaria/30KSM-03.jpg",
+	    "seminaria/30KSM-04.jpg",
+	    "seminaria/30KSM-05.jpg"
+]
+},
+
+
+{
+    id: "XXIX KSM",
+    nazwa: "XXIX KSM",
+    rok: "2013",
+    miejsce: "Świnoujście",
+    lat: 53.908841,
+    lng: 14.249251,
+
+    logo: "seminaria/29KSMlogo.jpg",
+    ksiazka: "seminaria/29KSMksiazka.jpg",
+    pdf: "pdf/29KSM.pdf",
+
+    opis: "XXIX Seminarium odbyło się w Świnoujściu, w dniach 16-19 kwietnia 2013 roku.",
+    galeria: [
+	    "seminaria/29KSM-01.jpg",
+	    "seminaria/29KSM-02.jpg",
+	    "seminaria/29KSM-03.jpg",
+	    "seminaria/29KSM-04.jpg",
+	    "seminaria/29KSM-05.jpg"
+]
+},
+
+{
+    id: "XXVIII KSM",
+    nazwa: "XXVIII KSM",
+    rok: "2012",
+    miejsce: "Boszkowo",
+    lat: 51.974477,
+    lng: 16.327494,
+
+    logo: "seminaria/28KSMlogo.jpg",
+    ksiazka: "seminaria/28KSMksiazka.jpg",
+    pdf: "pdf/28KSM.pdf",
+
+    opis: "XXVIII Seminarium odbyło się w Boszkowie, w dniach 8-11 maja 2012 roku.",
+    galeria: [
+	    "seminaria/28KSM-01.jpg",
+	    "seminaria/28KSM-02.jpg",
+	    "seminaria/28KSM-03.jpg",
+	    "seminaria/28KSM-04.jpg",
+	    "seminaria/28KSM-05.jpg"
+]
+},
+
+{
+    id: "XXVII KSM",
+    nazwa: "XXVII KSM",
+    rok: "2011",
+    miejsce: "Tleñ",
+    lat: 53.614338,
+    lng: 18.267462,
+
+    logo: "seminaria/27KSMlogo.jpg",
+    ksiazka: "seminaria/27KSMksiazka.jpg",
+    pdf: "pdf/27KSM.pdf",
+
+    opis: "XXVII Seminarium odbyło się Tleniu, w dniach 6-8 kwietnia 2011 roku.",
+    galeria: [
+	    "seminaria/27KSM-01.jpg",
+	    "seminaria/27KSM-02.jpg",
+	    "seminaria/27KSM-03.jpg",
+	    "seminaria/27KSM-04.jpg",
+	    "seminaria/27KSM-05.jpg"
+]
+},
+
+{
+    id: "XXVI KSM",
+    nazwa: "XXVI KSM",
+    rok: "2010",
+    miejsce: "Kudowa-Zdrój",
+    lat: 50.439521,
+    lng: 16.240128,
+
+    logo: "seminaria/26KSMlogo.jpg",
+    ksiazka: "seminaria/26KSMksiazka.jpg",
+    pdf: "pdf/26KSM.pdf",
+
+    opis: "XXVI Seminarium odbyło się w Kudowej-Zdrój, w dniach 20-23 kwietnia 2010 roku.",
+    galeria: [
+	    "seminaria/26KSM-01.jpg",
+	    "seminaria/26KSM-02.jpg",
+	    "seminaria/26KSM-03.jpg",
+	    "seminaria/26KSM-04.jpg",
+	    "seminaria/26KSM-05.jpg"
+]
+},
+
+{
+    id: "XXV KSM",
+    nazwa: "XXV KSM",
+    rok: "2009",
+    miejsce: "Boszkowo",
+    lat: 51.979073,
+    lng: 16.332477,
+
+    logo: "seminaria/25KSMlogo.jpg",
+    ksiazka: "seminaria/25KSMksiazka.jpg",
+    pdf: "pdf/25KSM.pdf",
+
+    opis: "XXV Seminarium odbyło się Boszkowie, w dniach 21-24 kwietnia 2009 roku.",
+    galeria: [
+	    "seminaria/25KSM-01.jpg",
+	    "seminaria/25KSM-02.jpg",
+	    "seminaria/25KSM-03.jpg",
+	    "seminaria/25KSM-04.jpg",
+	    "seminaria/25KSM-05.jpg"
+]
+},
+
+{
+    id: "XXIV KSM",
+    nazwa: "XXIV KSM",
+    rok: "2008",
+    miejsce: "Gdynia",
+    lat: 54.519889,
+    lng: 18.541775,
+
+    logo: "seminaria/24KSMlogo.jpg",
+    ksiazka: "seminaria/24KSMksiazka.jpg",
+    pdf: "pdf/24KSM.pdf",
+
+    opis: "XXIV Seminarium odbyło się w Gdyni, w dniach 2-4 kwietnia 2008 roku.",
+    galeria: [
+	    "seminaria/24KSM-01.jpg",
+	    "seminaria/24KSM-02.jpg",
+	    "seminaria/24KSM-03.jpg",
+	    "seminaria/24KSM-04.jpg",
+	    "seminaria/24KSM-05.jpg"
+]
+},
+
+{
+    id: "XXIII KSM",
+    nazwa: "XXIII KSM",
+    rok: "2007",
+    miejsce: "Serpelice",
+    lat: 52.274264,
+    lng: 23.056518,
+
+    logo: "seminaria/23KSMlogo.jpg",
+    ksiazka: "seminaria/23KSMksiazka.jpg",
+    pdf: "pdf/23KSM.pdf",
+
+    opis: "XXIII Seminarium odbyło się w Serpelicach, w dniach 24-27 kwietnia 2007 roku.",
+    galeria: [
+	    "seminaria/23KSM-01.jpg",
+	    "seminaria/23KSM-02.jpg",
+	    "seminaria/23KSM-03.jpg",
+	    "seminaria/23KSM-04.jpg",
+	    "seminaria/23KSM-05.jpg"
+]
+},
+
+{
+    id: "XXII KSM",
+    nazwa: "XXII KSM",
+    rok: "2006",
+    miejsce: "Huta Szklana",
+    lat: 50.857977,
+    lng: 21.021906,
+
+    logo: "seminaria/22KSMlogo.jpg",
+    ksiazka: "seminaria/22KSMksiazka.jpg",
+    pdf: "pdf/22KSM.pdf",
+
+    opis: "XXII Seminarium odbyło się w Hucie Szklanej, w dniach 26-28 kwietnia 2006 roku.",
+    galeria: [
+	    "seminaria/22KSM-01.jpg",
+	    "seminaria/22KSM-02.jpg",
+	    "seminaria/22KSM-03.jpg",
+	    "seminaria/22KSM-04.jpg",
+	    "seminaria/22KSM-05.jpg"
+]
+},
+
+{
+    id: "XXI KSM",
+    nazwa: "XXI KSM",
+    rok: "2005",
+    miejsce: "Ciechocinek",
+    lat: 52.878299,
+    lng: 18.789532,
+
+    logo: "seminaria/21KSMlogo.jpg",
+    ksiazka: "seminaria/21KSMksiazka.jpg",
+    pdf: "pdf/21KSM.pdf",
+
+    opis: "XXI Seminarium odbyło się w Ciechocinku, w dniach 6-7 kwietnia 2005 roku.",
+    galeria: [
+	    "seminaria/21KSM-01.jpg",
+	    "seminaria/21KSM-02.jpg",
+	    "seminaria/21KSM-03.jpg",
+	    "seminaria/21KSM-04.jpg",
+	    "seminaria/21KSM-05.jpg"
+]
+},
+
+{
+    id: "XX KSM",
+    nazwa: "XX KSM",
+    rok: "2004",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.440508,
+    lng: 20.424357,
+
+    logo: "seminaria/20KSMlogo.jpg",
+    ksiazka: "seminaria/20KSMksiazka.jpg",
+    pdf: "pdf/20KSM.pdf",
+
+    opis: "XX Seminarium odbyło się w Krościenku nad Dunajcem, w dniach 31 marca-2 kwietnia 2004 roku.",
+    galeria: [
+	    "seminaria/20KSM-01.jpg",
+	    "seminaria/20KSM-02.jpg",
+	    "seminaria/20KSM-03.jpg",
+	    "seminaria/20KSM-04.jpg",
+	    "seminaria/20KSM-05.jpg"
+]
+},
+
+{
+    id: "XIX KSM",
+    nazwa: "XIX KSM",
+    rok: "2003",
+    miejsce: "Słupsk",
+    lat: 54.463809,
+    lng: 17.015977,
+
+    logo: "seminaria/19KSMlogo.jpg",
+    ksiazka: "seminaria/19KSMksiazka.jpg",
+    pdf: "pdf/19KSM.pdf",
+
+    opis: "XIX Seminarium odbyło się w Słupsku, w dniach 22-24 września 2003 roku.",
+    galeria: [
+	    "seminaria/19KSM-01.jpg",
+	    "seminaria/19KSM-02.jpg",
+	    "seminaria/19KSM-03.jpg",
+	    "seminaria/19KSM-04.jpg",
+	    "seminaria/19KSM-05.jpg"
+]
+},
+
+{
+    id: "XVIII KSM",
+    nazwa: "XVIII KSM",
+    rok: "2002",
+    miejsce: "Lubin",
+    lat: 53.867831,
+    lng: 14.431791,
+
+    logo: "seminaria/18KSMlogo.jpg",
+    ksiazka: "seminaria/18KSMksiazka.jpg",
+    pdf: "pdf/18KSM.pdf",
+
+    opis: "XVIII Seminarium odbyło się w Lubinie, w dniach 24-26 kwietnia 2002 roku.",
+    galeria: [
+	    "seminaria/18KSM-01.jpg",
+	    "seminaria/18KSM-02.jpg",
+	    "seminaria/18KSM-03.jpg",
+	    "seminaria/18KSM-04.jpg",
+	    "seminaria/18KSM-05.jpg"
+]
+},
+
+{
+    id: "XVII KSM",
+    nazwa: "XVII KSM",
+    rok: "2001",
+    miejsce: "Ojców",
+    lat: 50.209825,
+    lng: 19.829681,
+
+    logo: "seminaria/17KSMlogo.jpg",
+    ksiazka: "seminaria/17KSMksiazka.jpg",
+    pdf: "pdf/17KSM.pdf",
+
+    opis: "XVII Seminarium odbyło się w Ojcowie, w dniach 30 maja-1 czerwca 2001 roku.",
+    galeria: [
+	    "seminaria/17KSM-01.jpg",
+	    "seminaria/17KSM-02.jpg",
+	    "seminaria/17KSM-03.jpg",
+	    "seminaria/17KSM-04.jpg",
+	    "seminaria/17KSM-05.jpg"
+]
+},
+
+{
+    id: "XVI KSM",
+    nazwa: "XVI KSM",
+    rok: "2000",
+    miejsce: "Hel",
+    lat: 54.608544,
+    lng: 18.800919,
+
+    logo: "seminaria/16KSMlogo.jpg",
+    ksiazka: "seminaria/16KSMksiazka.jpg",
+    pdf: "pdf/16KSM.pdf",
+
+    opis: "XVI Seminarium odbyło się w Helu, w dniach 20-22 września 2000 roku.",
+    galeria: [
+	    "seminaria/16KSM-01.jpg",
+	    "seminaria/16KSM-02.jpg",
+	    "seminaria/16KSM-03.jpg",
+	    "seminaria/16KSM-04.jpg",
+	    "seminaria/16KSM-05.jpg"
+]
+},
+
+{
+    id: "XV KSM",
+    nazwa: "XV KSM",
+    rok: "1999",
+    miejsce: "Łódź",
+    lat: 51.775254,
+    lng: 19.482226,
+
+    logo: "seminaria/15KSMlogo.jpg",
+    ksiazka: "seminaria/15KSMksiazka.jpg",
+    pdf: "pdf/15KSM.pdf",
+
+    opis: "XV Seminarium odbyło się w Łodzi, we wrześniu 1999 roku.",
+    galeria: [
+	    "seminaria/15KSM-01.jpg",
+	    "seminaria/15KSM-02.jpg",
+	    "seminaria/15KSM-03.jpg",
+	    "seminaria/15KSM-04.jpg",
+	    "seminaria/15KSM-05.jpg"
+]
+},
+
+{
+    id: "XIV KSM",
+    nazwa: "XIV KSM",
+    rok: "1998",
+    miejsce: "Wólka Milanowska",
+    lat: 50.845562,
+    lng: 21.082651,
+
+    logo: "seminaria/14KSMlogo.jpg",
+    ksiazka: "seminaria/14KSMksiazka.jpg",
+    pdf: "pdf/14KSM.pdf",
+
+    opis: "XIV Seminarium odbyło się w Wólce Milanowskiej, w kwietniu 1998 roku.",
+    galeria: [
+	    "seminaria/14KSM-01.jpg",
+	    "seminaria/14KSM-02.jpg",
+	    "seminaria/14KSM-03.jpg",
+	    "seminaria/14KSM-04.jpg",
+	    "seminaria/14KSM-05.jpg"
+]
+},
+
+{
+    id: "XIII KSM",
+    nazwa: "XIII KSM",
+    rok: "1997",
+    miejsce: "Świnoujście",
+    lat: 53.907852,
+    lng: 14.249513,
+
+    logo: "seminaria/13KSMlogo.jpg",
+    ksiazka: "seminaria/13KSMksiazka.jpg",
+    pdf: "pdf/13KSM.pdf",
+
+    opis: "XIII Seminarium odbyło się w Świnoujściu, w dniach 23-25 kwietnia 1997 roku.",
+    galeria: [
+	    "seminaria/13KSM-01.jpg",
+	    "seminaria/13KSM-02.jpg",
+	    "seminaria/13KSM-03.jpg",
+	    "seminaria/13KSM-04.jpg",
+	    "seminaria/13KSM-05.jpg"
+]
+},
+
+{
+    id: "XII KSM",
+    nazwa: "XII KSM",
+    rok: "1996",
+    miejsce: "Łódź",
+    lat: 51.822203,
+    lng: 19.499175,
+
+    logo: "seminaria/12KSMlogo.jpg",
+    ksiazka: "seminaria/12KSMksiazka.jpg",
+    pdf: "pdf/12KSM.pdf",
+
+    opis: "XII Seminarium odbyło się w Łodzi, w 1996 roku.",
+    galeria: [
+	    "seminaria/12KSM-01.jpg",
+	    "seminaria/12KSM-02.jpg",
+	    "seminaria/12KSM-03.jpg",
+	    "seminaria/12KSM-04.jpg",
+	    "seminaria/12KSM-05.jpg"
+]
+},
+
+{
+    id: "XI KSM",
+    nazwa: "XI KSM",
+    rok: "1995",
+    miejsce: "Giżycko",
+    lat: 54.035655,
+    lng: 21.767952,
+
+    logo: "seminaria/11KSMlogo.jpg",
+    ksiazka: "seminaria/11KSMksiazka.jpg",
+    pdf: "pdf/11KSM.pdf",
+
+    opis: "XI Seminarium odbyło się w Giżycku, w 1995 roku.",
+    galeria: [
+	    "seminaria/11KSM-01.jpg",
+	    "seminaria/11KSM-02.jpg",
+	    "seminaria/11KSM-03.jpg",
+	    "seminaria/11KSM-04.jpg",
+	    "seminaria/11KSM-05.jpg"
+]
+},
+
+{
+    id: "X KSM",
+    nazwa: "X KSM",
+    rok: "1994",
+    miejsce: "Obrzycko",
+    lat: 52.703280,
+    lng: 16.528342,
+
+    logo: "seminaria/10KSMlogo.jpg",
+    ksiazka: "seminaria/10KSMksiazka.jpg",
+    pdf: "pdf/10KSM.pdf",
+
+    opis: "X Seminarium odbyło się w Obrzycku, w 1994 roku.",
+    galeria: [
+	    "seminaria/10KSM-01.jpg",
+	    "seminaria/10KSM-02.jpg",
+	    "seminaria/10KSM-03.jpg",
+	    "seminaria/10KSM-04.jpg",
+	    "seminaria/10KSM-05.jpg"
+]
+},
+
+{
+    id: "IX KSM",
+    nazwa: "IX KSM",
+    rok: "1993",
+    miejsce: "Mysłów",
+    lat: 50.930414,
+    lng: 15.977361,
+
+    logo: "seminaria/9KSMlogo.jpg",
+    ksiazka: "seminaria/9KSMksiazka.jpg",
+    pdf: "pdf/9KSM.pdf",
+
+    opis: "IX Seminarium odbyło się w Mysłowie, w 1993 roku.",
+    galeria: [
+	    "seminaria/9KSM-01.jpg",
+	    "seminaria/9KSM-02.jpg",
+	    "seminaria/9KSM-03.jpg",
+	    "seminaria/9KSM-04.jpg",
+	    "seminaria/9KSM-05.jpg"
+]
+},
+
+{
+    id: "VIII KSM",
+    nazwa: "VIII KSM",
+    rok: "1992",
+    miejsce: "Obrzycko",
+    lat: 52.703280,
+    lng: 16.528342,
+
+    logo: "seminaria/8KSMlogo.jpg",
+    ksiazka: "seminaria/8KSMksiazka.jpg",
+    pdf: "pdf/8KSM.pdf",
+
+    opis: "VIII Seminarium odbyło się w Obrzycku, w 1992 roku.",
+    galeria: [
+	    "seminaria/8KSM-01.jpg",
+	    "seminaria/8KSM-02.jpg",
+	    "seminaria/8KSM-03.jpg",
+	    "seminaria/8KSM-04.jpg",
+	    "seminaria/8KSM-05.jpg"
+]
+},
+
+{
+    id: "VII KSM",
+    nazwa: "VII KSM",
+    rok: "1991",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/7KSMlogo.jpg",
+    ksiazka: "seminaria/7KSMksiazka.jpg",
+    pdf: "pdf/7KSM.pdf",
+
+    opis: "VII Seminarium odbyło się w Krościenku nad Dunajcem, w 1991 roku.",
+    galeria: [
+	    "seminaria/7KSM-01.jpg",
+	    "seminaria/7KSM-02.jpg",
+	    "seminaria/7KSM-03.jpg",
+	    "seminaria/7KSM-04.jpg",
+	    "seminaria/7KSM-05.jpg"
+]
+},
+
+{
+    id: "VI KSM",
+    nazwa: "VI KSM",
+    rok: "1990",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/6KSMlogo.jpg",
+    ksiazka: "seminaria/6KSMksiazka.jpg",
+    pdf: "pdf/6KSM.pdf",
+
+    opis: "VI Seminarium odbyło się w Krościenku nad Dunajcem, w 1990 roku.",
+    galeria: [
+	    "seminaria/6KSM-01.jpg",
+	    "seminaria/6KSM-02.jpg",
+	    "seminaria/6KSM-03.jpg",
+	    "seminaria/6KSM-04.jpg",
+	    "seminaria/6KSM-05.jpg"
+]
+},
+
+{
+    id: "V KSM",
+    nazwa: "V KSM",
+    rok: "1989",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/5KSMlogo.jpg",
+    ksiazka: "seminaria/5KSMksiazka.jpg",
+    pdf: "pdf/5KSM.pdf",
+
+    opis: "V Seminarium odbyło się w Krościenku nad Dunajcem, w 1989 roku.",
+    galeria: [
+	    "seminaria/5KSM-01.jpg",
+	    "seminaria/5KSM-02.jpg",
+	    "seminaria/5KSM-03.jpg",
+	    "seminaria/5KSM-04.jpg",
+	    "seminaria/5KSM-05.jpg"
+]
+},
+
+{
+    id: "IV KSM",
+    nazwa: "IV KSM",
+    rok: "1988",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/4KSMlogo.jpg",
+    ksiazka: "seminaria/4KSMksiazka.jpg",
+    pdf: "pdf/4KSM.pdf",
+
+    opis: "IV Seminarium odbyło się w Krościenku nad Dunajcem, w dniach 22-24 marca, 1988 roku.",
+    galeria: [
+	    "seminaria/4KSM-01.jpg",
+	    "seminaria/4KSM-02.jpg",
+	    "seminaria/4KSM-03.jpg",
+	    "seminaria/4KSM-04.jpg",
+	    "seminaria/4KSM-05.jpg"
+]
+},
+
+{
+    id: "III KSM",
+    nazwa: "III KSM",
+    rok: "1987",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/3KSMlogo.jpg",
+    ksiazka: "seminaria/3KSMksiazka.jpg",
+    pdf: "pdf/3KSM.pdf",
+
+    opis: "III Seminarium odbyło się w Krościenku nad Dunajcem, w dniach 30 marca-2 kwietnia, 1987 roku.",
+    galeria: [
+	    "seminaria/3KSM-01.jpg",
+	    "seminaria/3KSM-02.jpg",
+	    "seminaria/3KSM-03.jpg",
+	    "seminaria/3KSM-04.jpg",
+	    "seminaria/3KSM-05.jpg"
+]
+},
+
+{
+    id: "II KSM",
+    nazwa: "II KSM",
+    rok: "1986",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/2KSMlogo.jpg",
+    ksiazka: "seminaria/2KSMksiazka.jpg",
+    pdf: "pdf/2KSM.pdf",
+
+    opis: "II Seminarium odbyło się w Krościenku nad Dunajcem, w dniach 7-10 kwietnia, 1986 roku.",
+    galeria: [
+	    "seminaria/2KSM-01.jpg",
+	    "seminaria/2KSM-02.jpg",
+	    "seminaria/2KSM-03.jpg",
+	    "seminaria/2KSM-04.jpg",
+	    "seminaria/2KSM-05.jpg"
+]
+},
+
+
+{
+    id: "I KSM",
+    nazwa: "I KSM",
+    rok: "1985",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.441142,
+    lng: 20.423540,
+
+    logo: "seminaria/1KSMlogo.jpg",
+    ksiazka: "seminaria/1KSMksiazka.jpg",
+    pdf: "pdf/1KSM.pdf",
+
+    opis: "I Seminarium odbyło się w Krościenku nad Dunajcem, w dniach 15-17 kwietnia, 1985 roku.",
+    galeria: [
+	    "seminaria/1KSM-01.jpg",
+	    "seminaria/1KSM-02.jpg",
+	    "seminaria/1KSM-03.jpg",
+	    "seminaria/1KSM-04.jpg",
+	    "seminaria/1KSM-05.jpg"
+]
 }
+
+
+
+
 
 ];
 
@@ -1029,7 +1875,7 @@ const seminariaData = [
 const map = L.map('map', {
     center: [52.1, 19.3],
     zoom: 6,
-    scrollWheelZoom: false
+    scrollWheelZoom: window.innerWidth > 768
 });
 
 L.tileLayer(
@@ -1048,16 +1894,31 @@ function pokazSeminarium(index){
     document.getElementById("map")
     .scrollIntoView({behavior:"smooth"});
 
+    if (s.lat === null || s.lng === null) {
+        return;
+    }
+
     setTimeout(() => {
 
         map.setView([s.lat, s.lng], 12);
 
-        markers[index].openPopup();
+        if(markers[index]){
+            markers[index].openPopup();
+        }
 
     }, 500);
 }
 
+const usedPositions = {};
 seminariaData.forEach((s, i) => {
+
+const key = s.miejsce.split(" - ")[0];
+
+    if(!usedPositions[key]){
+        usedPositions[key] = 0;
+    }
+
+    const overlapIndex = usedPositions[key]++;
 
     const popup = `
         <div style="text-align:center; max-width:260px;">
@@ -1087,11 +1948,41 @@ seminariaData.forEach((s, i) => {
         </div>
     `;
 
-    const marker = L.marker([s.lat, s.lng])
+ const snailIcon = L.divIcon({
+     className: 'custom-snail-marker',
+     html: `
+<div class="snail-marker-wrapper overlap-${overlapIndex}">
+        <img src="${s.logo}" class="snail-marker-icon">
+
+        <div class="snail-marker-year">
+            ${s.rok}
+        </div>
+
+    </div>
+`,
+     iconSize: [50, 50],
+     iconAnchor: [25, 45],
+     popupAnchor: [0, -40]
+ });
+
+if (s.lat !== null && s.lng !== null) {
+
+    const marker = L.marker(
+        [s.lat, s.lng],
+        { icon: snailIcon }
+    )
+
     .bindPopup(popup)
     .addTo(map);
 
     markers.push(marker);
+
+} else {
+
+    markers.push(null);
+
+}
+
 
 });
 

@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy – The Society of Polish Malacologists</title>
-    <meta name="description" content="Privacy policy of the Society of Polish Malacologists. Information on the processing of personal data, cookies, and users' rights.">
-    <meta name="keywords" content="malacology, The Society of Polish Malacologists, molluscs, snails, bivalves, gastropoda, bivalvia, zoology, scientific research">
+    <title>National Malacological Seminars – Association of Polish Malacologists</title>
+    <meta name="description" content="A website dedicated to the National Malacological Seminars organised by the Association of Polish Malacologists.">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,8 +14,8 @@
     <link rel="alternate" hreflang="en" href="https://malakologia.org/national-malacological-seminars.html">
 
     <!-- Open Graph (social media) -->
-    <meta property="og:title" content="The Society of Polish Malacologists">
-    <meta property="og:description" content="Privacy policy and rules on the processing of personal data and cookies on the website of the Society of Polish Malacologists.">
+    <meta property="og:title" content="National Malacological Seminars – Association of Polish Malacologists">
+    <meta property="og:description" content="A website dedicated to the National Malacological Seminars organised by the Association of Polish Malacologists.">
     <meta property="og:url" content="https://malakologia.org/national-malacological-seminars.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
@@ -27,8 +26,7 @@
 
 <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Society of Polish Malacologists">
-    <meta name="twitter:description" content="Research on molluscs, publications, and scientific activities.">
+    <meta name="twitter:title" content="National Malacological Seminars – Association of Polish Malacologists">
     <meta name="twitter:image" content="https://malakologia.org/og.jpg">
 
 <link rel="icon" type="image/png" href="favicon.png">
@@ -36,6 +34,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- LEAFLET -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
  <style>
 
@@ -67,15 +69,7 @@ header {
     margin: 30px 0;
 }
 
-header img {
-    max-width: 1300px;		/* SZEROKOŚĆ banera */
-    width: 90%;				/* responsywność */
-    height: 180px;			/* WYSOKOŚĆ banera */
-    object-fit: cover;		/* przycina obraz estetycznie */
-    border-radius: 16px;	/* zaokrąglone rogi */
-    box-shadow: 0 8px 18px rgba(10,25,50,0.25);		/* lekki cień */
-    display: block;
-}
+
 
 /* ========================= */
 /* CONTAINER */
@@ -253,6 +247,46 @@ main {
 
 
 /* ========================= */
+/* GALERIA */
+/* ========================= */
+
+.gallery-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.gallery-container {
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.gallery-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.gallery-controls {
+    margin-top: 15px;
+}
+
+.gallery-controls button {
+    background: #3a6ea5;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 0 5px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+/* ========================= */
 /* FOOTER */
 /* ========================= */
 
@@ -389,137 +423,142 @@ footer {
 }
 
 /* ========================= */
-/* AKTUALNOŚCI */
+/* MAPA */
 /* ========================= */
 
-.news {
-    margin: 30px 0 40px;
+#map {
+    height: 500px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(10,25,50,0.12);
 }
-
-.news h2 {
-    font-size: 22px;
-    margin-bottom: 18px;
-    color: #0f2742;
-    border-left: 4px solid #3a6ea5;
-    padding-left: 10px;
-}
-
-.news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.news-item {
-    background: #f4f7fb;
-    border-left: 4px solid #3a6ea5;
-    padding: 14px 18px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(10,25,50,0.05);
-    transition: transform 0.15s, box-shadow 0.15s;
-}
-
-.news-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(10,25,50,0.1);
-}
-
-.news-date {
-    font-size: 13px;
-    color: #5f7286;
-    margin-bottom: 6px;
-    font-weight: 500;
-}
-
-.news-item p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #2c3e50;
-}
-
-/* ukryta część newsów (animacja) */
-.news-hidden {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-
-.news-hidden.show {
-    max-height: 500px;
-}
-
-/* przycisk */
-.news-toggle {
-    margin-top: 12px;
-    background: none;
-    border: none;
-    color: #3a6ea5;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 6px 0;
-}
-
-.news-toggle:hover {
-    text-decoration: underline;
-}
-
 
 
 /* ========================= */
-/* SEKCJE */
+/* TABELA */
 /* ========================= */
 
-.sections {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
+.table-wrapper {
+    overflow-x: auto;
 }
 
-.section-box {
-    display: block;					/* cały box jako blok */
-    text-decoration: none;			/* usuwa podkreślenie linku */
-    color: inherit;					/* zachowuje kolor tekstu */
-    border: 1px solid #d2dce7;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(10,25,50,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+#seminaria-table {
+    margin-bottom: 40px;
 }
 
-.section-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(10,25,50,0.15);
-}
-
-.section-box img {
+table {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
-    display: block;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
-.section-box h3 {
-    margin: 10px 14px 10px 14px;   /* mniej „ciężki” spacing */
-    font-size: 16px;              /* mniejszy tekst */
-    color: #6f859b;               /* jaśniejszy (mniej kontrastowy) */
-    font-weight: 500;             /* cieńsza czcionka */
-    letter-spacing: 0.3px;        /* subtelna elegancja */
-    opacity: 0.8;
-    transition: opacity 0.2s;
+thead {
+    background: #e9f0f7;
 }
 
-.section-box:hover h3 {
-    opacity: 1;
+th, td {
+    padding: 14px;
+    vertical-align: top;
 }
-.section-box p {
-    margin: 0 14px 16px 14px;
-    font-size: 14px;
-    line-height: 1.55;
-    color: #5f7286;
+
+tbody tr:nth-child(even) {
+    background: #f7fafc;
 }
+
+tbody tr:hover {
+    background: #eef4f9;
+}
+
+/* ========================= */
+/* ZDJĘCIA */
+/* ========================= */
+
+td img {
+    width: 90px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+td img:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* PRZYCISKI */
+/* ========================= */
+
+.map-btn,
+.pdf-btn {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: white !important;
+    background: #3a6ea5;
+    font-size: 13px;
+    margin: 4px;
+}
+
+
+.map-btn:hover,
+.pdf-btn:hover {
+    background: #28527d;
+}
+
+/* ========================= */
+/* INFO */
+/* ========================= */
+
+.seminar-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-btn {
+    background: #3a6ea5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.seminar-info {
+    display: none;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #eef4f9;
+    border: 1px solid #c9d9ea;
+}
+
+/* ========================= */
+/* LIGHTBOX */
+/* ========================= */
+
+.custom-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.custom-lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
 
 /* ========================= */
 /* MOBILE */
@@ -588,6 +627,42 @@ footer {
         height: 140px;
     }
 
+.leaflet-popup-content {
+    width: 220px !important;
+    max-width: 220px !important;
+}
+
+.gallery-controls button {
+    font-size: 12px;
+    padding: 8px 10px;
+}
+
+/* tabela seminariów mobile */
+
+table {
+    font-size: 13px;
+}
+
+td, th {
+    padding: 8px;
+}
+
+/* ukryj miniatury */
+
+td img {
+    width: 60px;
+}
+
+/* przyciski */
+
+.map-btn,
+.pdf-btn {
+    display: block;
+    margin: 6px auto;
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
     footer {
         font-size: 12px;
         padding: 14px;
@@ -636,6 +711,123 @@ footer {
 
 }
 
+/* ========================= */
+/* MARKERY ŚLIMAKÓW */
+/* ========================= */
+
+.custom-snail-marker {
+    background: transparent;
+    border: none;
+}
+
+.snail-marker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snail-marker-year {
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #0f2742;
+
+    background: rgba(255,255,255,0.92);
+
+    padding: 1px 5px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* domyślnie */
+
+.snail-marker-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+/* ikonka */
+
+.snail-marker-icon {
+    width: 32px;
+    height: 32px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* rok */
+
+.snail-marker-year {
+    position: absolute;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    background: rgba(255,255,255,0.92);
+
+    padding: 1px 5px;
+    border-radius: 999px;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+}
+
+/* pierwszy marker */
+
+.overlap-0 .snail-marker-year {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* drugi marker */
+
+.overlap-1 .snail-marker-year {
+    right: -22px;
+    top: 8px;
+}
+
+/* trzeci marker */
+
+.overlap-2 .snail-marker-year {
+    left: -22px;
+    top: 8px;
+}
+
+/* czwarty marker */
+
+.overlap-3 .snail-marker-year {
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* przesunięcie całych markerów */
+
+.overlap-1 {
+    transform: translateX(12px);
+}
+
+.overlap-2 {
+    transform: translateX(-12px);
+}
+
+.overlap-3 {
+    transform: translateY(-12px);
+}
+
     </style>
 </head>
 <body>
@@ -644,33 +836,35 @@ footer {
 <header>
     <div class="banner-wrapper">
 
-        <img src="baner/baner1.jpg" class="active" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner2.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner3.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner4.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner5.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner6.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner7.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner8.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner9.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner10.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner11.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner12.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner13.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner14.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner15.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner16.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner17.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner18.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner19.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
-        <img src="baner/baner20.jpg" alt="Panoramic banner featuring photographs of molluscs (snails and bivalves)">
+        <img src="baner/baner1.jpg" class="active" alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner2.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner3.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner4.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner5.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner6.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner7.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner8.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner9.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner10.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner11.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner12.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner13.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner14.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner15.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner16.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner17.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner18.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner19.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
+        <img src="baner/baner20.jpg" loading="lazy"alt="Panoramic banner with photographs of molluscs">
 
         <div class="banner-title">
-            The Society of Polish Malacologists
+            The Association of Polish Malacologists
         </div>
 
     </div>
 </header>
+
+
 
 <div id="container">
 
@@ -692,7 +886,7 @@ footer {
 
 <h2>Menu</h2>
 <ul>
-    <li><a href="index-en.html" >Home</a></li>
+    <li><a href="index-en.html">Home</a></li>
     <li><a href="association.html">Association</a></li>
     <li><a href="national-malacological-seminars.html" class="active">National Malacological Seminars</a></li>
     <li><a href="publications.html">Publications</a></li>
@@ -703,32 +897,49 @@ footer {
     <li><a href="molluscs-of-poland.html">Molluscs of Poland</a></li>
 </ul>
 
+
     </nav>
 
 
-<main>
+    <main>
 
-    <section class="welcome">
-        <h1>National Malacological Seminars</h1>
+        <section class="welcome">
+            <h1>National Malacological Seminars – The Association of Polish Malacologists</h1>
 
+<p class="seo-note">
+Archive of the National Malacological Seminars organised by the
+            Association of Polish Malacologists.
+            Interactive seminar map and abstract books.
+</p>
 
+        </section>
 
-    </section>
+<div id="map"></div>
 
-</main>
+<div id="seminaria-table">
+
+<div class="table-wrapper">
+
+<table>
+
+<tbody id="seminaria-body"></tbody>
+
+</table>
 
 </div>
 
+</div>
+
+    </main>
+</div>
+
 <footer>
-    © 2026 The Society of Polish Malacologists – all rights reserved |
+    © 2026 The Association of Polish Malacologists – all rights reserved |
 	    <a href="contact.html">Contact</a>  |
 	    <a href="privacy-policy.html">Privacy Policy</a> |
-	    <a href="terms.html">Terms of Use</a> |
+	    <a href="terms.html">Terms of Use</a>
 
 </footer>
-
-
-
 
 <script>
 const menuToggle = document.querySelector('.menu-toggle');
@@ -740,13 +951,16 @@ if (menuToggle && navMenu) {
         menuToggle.setAttribute('aria-expanded', isShown);
     });
 }
+
 </script>
+
 
 
 <script>
 /* ========================= */
 /* SLIDER BANERA */
 /* ========================= */
+
 
 const images = document.querySelectorAll('.banner-wrapper img');
 let index = 0;
@@ -761,11 +975,957 @@ if (images.length > 0) {
 
 </script>
 
+<script>
+
+/* ========================= */
+/* DANE */
+/* ========================= */
+
+const seminariaData = [
+
+{
+    id: "XL KSM",
+    nazwa: "XL KSM",
+    rok: "2026",
+    miejsce: "Kraków",
+    lat: 50.025623,
+    lng: 19.901038,
+
+    logo: "seminaria/40KSMlogo.jpg",
+    ksiazka: "seminaria/40KSMksiazka.jpg",
+    pdf: "pdf/40KSM.pdf",
+
+    opis: "The 40th Seminar was held in Kraków on 15–18 April 2026.",
+    galeria: [
+        "seminaria/40KSM-01.jpg",
+        "seminaria/40KSM-02.jpg",
+        "seminaria/40KSM-03.jpg",
+        "seminaria/40KSM-04.jpg",
+        "seminaria/40KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXIX KSM",
+    nazwa: "XXXIX KSM",
+    rok: "2025",
+    miejsce: "Toruń - Krobia",
+    lat: 53.040417,
+    lng: 18.787692,
+
+    logo: "seminaria/39KSMlogo.jpg",
+    ksiazka: "seminaria/39KSMksiazka.jpg",
+    pdf: "pdf/39KSM.pdf",
+
+    opis: "The 39th Seminar was held in Toruń–Krobia on 7–10 May 2025.",
+    galeria: [
+        "seminaria/39KSM-01.jpg",
+        "seminaria/39KSM-02.jpg",
+        "seminaria/39KSM-03.jpg",
+        "seminaria/39KSM-04.jpg",
+        "seminaria/39KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXVIII KSM",
+    nazwa: "XXXVIII KSM",
+    rok: "2024",
+    miejsce: "Siedlce",
+    lat: 52.178884,
+    lng: 22.296615,
+
+    logo: "seminaria/38KSMlogo.jpg",
+    ksiazka: "seminaria/38KSMksiazka.jpg",
+    pdf: "pdf/38KSM.pdf",
+
+    opis: "The 38th Seminar was held in Siedlce on 22–25 May 2024.",
+    galeria: [
+        "seminaria/38KSM-01.jpg",
+        "seminaria/38KSM-02.jpg",
+        "seminaria/38KSM-03.jpg",
+        "seminaria/38KSM-04.jpg",
+        "seminaria/38KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXVII KSM",
+    nazwa: "XXXVII KSM",
+    rok: "2023",
+    miejsce: "Katowice",
+    lat: 50.291073,
+    lng: 18.975342,
+
+    logo: "seminaria/37KSMlogo.jpg",
+    ksiazka: "seminaria/37KSMksiazka.jpg",
+    pdf: "pdf/37KSM.pdf",
+
+    opis: "The 37th Seminar was held in Katowice on 25–27 May 2023.",
+    galeria: [
+        "seminaria/37KSM-01.jpg",
+        "seminaria/37KSM-02.jpg",
+        "seminaria/37KSM-03.jpg",
+        "seminaria/37KSM-04.jpg",
+        "seminaria/37KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXVI KSM",
+    nazwa: "XXXVI KSM",
+    rok: "2022",
+    miejsce: "Toruń",
+    lat: 53.0087350,
+    lng: 18.6060282,
+
+    logo: "seminaria/36KSMlogo.jpg",
+    ksiazka: "seminaria/36KSMksiazka.jpg",
+    pdf: "pdf/36KSM.pdf",
+
+    opis: "The 36th Seminar was held in Toruń on 12–14 May 2022.",
+    galeria: [
+        "seminaria/36KSM-01.jpg",
+        "seminaria/36KSM-02.jpg",
+        "seminaria/36KSM-03.jpg",
+        "seminaria/36KSM-04.jpg",
+        "seminaria/36KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXV KSM",
+    nazwa: "XXXV KSM",
+    rok: "2019",
+    miejsce: "Szczecin",
+    lat: 53.435681295,
+    lng: 14.533950245,
+
+    logo: "seminaria/35KSMlogo.jpg",
+    ksiazka: "seminaria/35KSMksiazka.jpg",
+    pdf: "pdf/35KSM.pdf",
+
+    opis: "The 35th Seminar was held in Szczecin on 15–17 May 2019.",
+    galeria: [
+        "seminaria/35KSM-01.jpg",
+        "seminaria/35KSM-02.jpg",
+        "seminaria/35KSM-03.jpg",
+        "seminaria/35KSM-04.jpg",
+        "seminaria/35KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXIV KSM",
+    nazwa: "XXXIV KSM",
+    rok: "2018",
+    miejsce: "Toruń",
+    lat: 53.0116203,
+    lng: 18.61712898,
+
+    logo: "seminaria/34KSMlogo.jpg",
+    ksiazka: "seminaria/34KSMksiazka.jpg",
+    pdf: "pdf/34KSM.pdf",
+
+    opis: "The 34th Seminar was held in Toruń on 13–15 September 2018.",
+    galeria: [
+        "seminaria/35KSM-01.jpg",
+        "seminaria/35KSM-02.jpg",
+        "seminaria/35KSM-03.jpg",
+        "seminaria/35KSM-04.jpg",
+        "seminaria/35KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXIII KSM",
+    nazwa: "XXXIII KSM",
+    rok: "2017",
+    miejsce: "Kraków",
+    lat: 50.073298,
+    lng: 19.944871,
+
+    logo: "seminaria/33KSMlogo.jpg",
+    ksiazka: "seminaria/33KSMksiazka.jpg",
+    pdf: "pdf/33Euromal_Abstract Book.pdf",
+
+    opis: "The 33rd Seminar was held in Kraków as part of the 8th Congress of the European Malacological Societies (EUROMAL) on 10–14 September 2017.",
+    galeria: [
+        "seminaria/33KSM-01.jpg",
+        "seminaria/33KSM-02.jpg",
+        "seminaria/33KSM-03.jpg",
+        "seminaria/33KSM-04.jpg",
+        "seminaria/33KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXII KSM",
+    nazwa: "XXXII KSM",
+    rok: "2016",
+    miejsce: "Spała",
+    lat: 51.542406,
+    lng: 20.137557,
+
+    logo: "seminaria/32KSMlogo.jpg",
+    ksiazka: "seminaria/32KSMksiazka.jpg",
+    pdf: "pdf/32KSM.pdf",
+
+    opis: "The 32nd Seminar was held in Spała on 13–15 October 2016.",
+    galeria: [
+        "seminaria/32KSM-01.jpg",
+        "seminaria/32KSM-02.jpg",
+        "seminaria/32KSM-03.jpg",
+        "seminaria/32KSM-04.jpg",
+        "seminaria/32KSM-05.jpg"
+]
+},
+
+{
+    id: "XXXI KSM",
+    nazwa: "XXXI KSM",
+    rok: "2015",
+    miejsce: "Wieliczka",
+    lat: 49.983421,
+    lng: 20.054672,
+
+    logo: "seminaria/31KSMlogo.jpg",
+    ksiazka: "seminaria/31KSMksiazka.jpg",
+    pdf: "pdf/31KSM.pdf",
+
+    opis: "The 31st Seminar was held in Wieliczka on 22–25 September 2015.",
+    galeria: [
+        "seminaria/31KSM-01.jpg",
+        "seminaria/31KSM-02.jpg",
+        "seminaria/31KSM-03.jpg",
+        "seminaria/31KSM-04.jpg",
+        "seminaria/31KSM-05.jpg"
+]
+},
+
+{
+    id: "XXX KSM",
+    nazwa: "XXX KSM",
+    rok: "2014",
+    miejsce: "Łopuszna",
+    lat: 49.499487,
+    lng: 20.136544,
+
+    logo: "seminaria/30KSMlogo.jpg",
+    ksiazka: "seminaria/30KSMksiazka.jpg",
+    pdf: "pdf/30KSM.pdf",
+
+    opis: "The 30th Seminar was held in Łopuszna on 8–10 October 2014.",
+    galeria: [
+        "seminaria/30KSM-01.jpg",
+        "seminaria/30KSM-02.jpg",
+        "seminaria/30KSM-03.jpg",
+        "seminaria/30KSM-04.jpg",
+        "seminaria/30KSM-05.jpg"
+]
+},
+
+{
+    id: "XXIX KSM",
+    nazwa: "XXIX KSM",
+    rok: "2013",
+    miejsce: "Świnoujście",
+    lat: 53.908841,
+    lng: 14.249251,
+
+    logo: "seminaria/29KSMlogo.jpg",
+    ksiazka: "seminaria/29KSMksiazka.jpg",
+    pdf: "pdf/29KSM.pdf",
+
+    opis: "The 29th Seminar was held in Świnoujście on 16–19 April 2013.",
+    galeria: [
+        "seminaria/29KSM-01.jpg",
+        "seminaria/29KSM-02.jpg",
+        "seminaria/29KSM-03.jpg",
+        "seminaria/29KSM-04.jpg",
+        "seminaria/29KSM-05.jpg"
+]
+},
+
+{
+    id: "XXVIII KSM",
+    nazwa: "XXVIII KSM",
+    rok: "2012",
+    miejsce: "Boszkowo",
+    lat: 51.974477,
+    lng: 16.327494,
+
+    logo: "seminaria/28KSMlogo.jpg",
+    ksiazka: "seminaria/28KSMksiazka.jpg",
+    pdf: "pdf/28KSM.pdf",
+
+    opis: "The 28th Seminar was held in Boszkowo on 8–11 May 2012.",
+    galeria: [
+        "seminaria/28KSM-01.jpg",
+        "seminaria/28KSM-02.jpg",
+        "seminaria/28KSM-03.jpg",
+        "seminaria/28KSM-04.jpg",
+        "seminaria/28KSM-05.jpg"
+]
+},
+
+{
+    id: "XXVII KSM",
+    nazwa: "XXVII KSM",
+    rok: "2011",
+    miejsce: "Tleń",
+    lat: 53.614338,
+    lng: 18.267462,
+
+    logo: "seminaria/27KSMlogo.jpg",
+    ksiazka: "seminaria/27KSMksiazka.jpg",
+    pdf: "pdf/27KSM.pdf",
+
+    opis: "The 27th Seminar was held in Tleń on 6–8 April 2011.",
+    galeria: [
+        "seminaria/27KSM-01.jpg",
+        "seminaria/27KSM-02.jpg",
+        "seminaria/27KSM-03.jpg",
+        "seminaria/27KSM-04.jpg",
+        "seminaria/27KSM-05.jpg"
+]
+},
+
+{
+    id: "XXVI KSM",
+    nazwa: "XXVI KSM",
+    rok: "2010",
+    miejsce: "Kudowa-Zdrój",
+    lat: 50.439521,
+    lng: 16.240128,
+
+    logo: "seminaria/26KSMlogo.jpg",
+    ksiazka: "seminaria/26KSMksiazka.jpg",
+    pdf: "pdf/26KSM.pdf",
+
+    opis: "The 26th Seminar was held in Kudowa-Zdrój on 20–23 April 2010.",
+    galeria: [
+        "seminaria/26KSM-01.jpg",
+        "seminaria/26KSM-02.jpg",
+        "seminaria/26KSM-03.jpg",
+        "seminaria/26KSM-04.jpg",
+        "seminaria/26KSM-05.jpg"
+]
+},
+
+{
+    id: "XXV KSM",
+    nazwa: "XXV KSM",
+    rok: "2009",
+    miejsce: "Boszkowo",
+    lat: 51.979073,
+    lng: 16.332477,
+
+    logo: "seminaria/25KSMlogo.jpg",
+    ksiazka: "seminaria/25KSMksiazka.jpg",
+    pdf: "pdf/25KSM.pdf",
+
+    opis: "The 25th Seminar was held in Boszkowo on 21–24 April 2009.",
+    galeria: [
+        "seminaria/25KSM-01.jpg",
+        "seminaria/25KSM-02.jpg",
+        "seminaria/25KSM-03.jpg",
+        "seminaria/25KSM-04.jpg",
+        "seminaria/25KSM-05.jpg"
+]
+},
+
+{
+    id: "XXIV KSM",
+    nazwa: "XXIV KSM",
+    rok: "2008",
+    miejsce: "Gdynia",
+    lat: 54.519889,
+    lng: 18.541775,
+
+    logo: "seminaria/24KSMlogo.jpg",
+    ksiazka: "seminaria/24KSMksiazka.jpg",
+    pdf: "pdf/24KSM.pdf",
+
+    opis: "The 24th Seminar was held in Gdynia on 2–4 April 2008.",
+    galeria: [
+        "seminaria/24KSM-01.jpg",
+        "seminaria/24KSM-02.jpg",
+        "seminaria/24KSM-03.jpg",
+        "seminaria/24KSM-04.jpg",
+        "seminaria/24KSM-05.jpg"
+]
+},
+
+{
+    id: "XXIII KSM",
+    nazwa: "XXIII KSM",
+    rok: "2007",
+    miejsce: "Serpelice",
+    lat: 52.274264,
+    lng: 23.056518,
+
+    logo: "seminaria/23KSMlogo.jpg",
+    ksiazka: "seminaria/23KSMksiazka.jpg",
+    pdf: "pdf/23KSM.pdf",
+
+    opis: "The 23rd Seminar was held in Serpelice on 24–27 April 2007.",
+    galeria: [
+        "seminaria/23KSM-01.jpg",
+        "seminaria/23KSM-02.jpg",
+        "seminaria/23KSM-03.jpg",
+        "seminaria/23KSM-04.jpg",
+        "seminaria/23KSM-05.jpg"
+]
+},
+
+{
+    id: "XXII KSM",
+    nazwa: "XXII KSM",
+    rok: "2006",
+    miejsce: "Huta Szklana",
+    lat: 50.857977,
+    lng: 21.021906,
+
+    logo: "seminaria/22KSMlogo.jpg",
+    ksiazka: "seminaria/22KSMksiazka.jpg",
+    pdf: "pdf/22KSM.pdf",
+
+    opis: "The 22nd Seminar was held in Huta Szklana on 26–28 April 2006.",
+    galeria: [
+        "seminaria/22KSM-01.jpg",
+        "seminaria/22KSM-02.jpg",
+        "seminaria/22KSM-03.jpg",
+        "seminaria/22KSM-04.jpg",
+        "seminaria/22KSM-05.jpg"
+]
+},
+
+{
+    id: "XXI KSM",
+    nazwa: "XXI KSM",
+    rok: "2005",
+    miejsce: "Ciechocinek",
+    lat: 52.878299,
+    lng: 18.789532,
+
+    logo: "seminaria/21KSMlogo.jpg",
+    ksiazka: "seminaria/21KSMksiazka.jpg",
+    pdf: "pdf/21KSM.pdf",
+
+    opis: "The 21st Seminar was held in Ciechocinek on 6–7 April 2005.",
+    galeria: [
+        "seminaria/21KSM-01.jpg",
+        "seminaria/21KSM-02.jpg",
+        "seminaria/21KSM-03.jpg",
+        "seminaria/21KSM-04.jpg",
+        "seminaria/21KSM-05.jpg"
+]
+},
+
+{
+    id: "XX KSM",
+    nazwa: "XX KSM",
+    rok: "2004",
+    miejsce: "Krościenko nad Dunajcem",
+    lat: 49.440508,
+    lng: 20.424357,
+
+    logo: "seminaria/20KSMlogo.jpg",
+    ksiazka: "seminaria/20KSMksiazka.jpg",
+    pdf: "pdf/20KSM.pdf",
+
+    opis: "The 20th Seminar was held in Krościenko nad Dunajcem on 31 March–2 April 2004.",
+    galeria: [
+        "seminaria/20KSM-01.jpg",
+        "seminaria/20KSM-02.jpg",
+        "seminaria/20KSM-03.jpg",
+        "seminaria/20KSM-04.jpg",
+        "seminaria/20KSM-05.jpg"
+]
+},
+
+{
+    id: "XIX KSM",
+    nazwa: "XIX KSM",
+    rok: "2003",
+    miejsce: "Słupsk",
+    lat: 54.463809,
+    lng: 17.015977,
+
+    logo: "seminaria/19KSMlogo.jpg",
+    ksiazka: "seminaria/19KSMksiazka.jpg",
+    pdf: "pdf/19KSM.pdf",
+
+    opis: "The 19th Seminar was held in Słupsk on 22–24 September 2003.",
+    galeria: [
+        "seminaria/19KSM-01.jpg",
+        "seminaria/19KSM-02.jpg",
+        "seminaria/19KSM-03.jpg",
+        "seminaria/19KSM-04.jpg",
+        "seminaria/19KSM-05.jpg"
+]
+},
+
+{
+    id: "XVIII KSM",
+    nazwa: "XVIII KSM",
+    rok: "2002",
+    miejsce: "Lubin",
+    lat: 53.867831,
+    lng: 14.431791,
+
+    logo: "seminaria/18KSMlogo.jpg",
+    ksiazka: "seminaria/18KSMksiazka.jpg",
+    pdf: "pdf/18KSM.pdf",
+
+    opis: "The 18th Seminar was held in Lubin on 24–26 April 2002.",
+    galeria: [
+        "seminaria/18KSM-01.jpg",
+        "seminaria/18KSM-02.jpg",
+        "seminaria/18KSM-03.jpg",
+        "seminaria/18KSM-04.jpg",
+        "seminaria/18KSM-05.jpg"
+]
+},
+
+{
+    id: "XVII KSM",
+    nazwa: "XVII KSM",
+    rok: "2001",
+    miejsce: "Ojców",
+    lat: 50.209825,
+    lng: 19.829681,
+
+    logo: "seminaria/17KSMlogo.jpg",
+    ksiazka: "seminaria/17KSMksiazka.jpg",
+    pdf: "pdf/17KSM.pdf",
+
+    opis: "The 17th Seminar was held in Ojców on 30 May–1 June 2001.",
+    galeria: [
+        "seminaria/17KSM-01.jpg",
+        "seminaria/17KSM-02.jpg",
+        "seminaria/17KSM-03.jpg",
+        "seminaria/17KSM-04.jpg",
+        "seminaria/17KSM-05.jpg"
+]
+},
+
+{
+    id: "XVI KSM",
+    nazwa: "XVI KSM",
+    rok: "2000",
+    miejsce: "Hel",
+    lat: 54.608544,
+    lng: 18.800919,
+
+    logo: "seminaria/16KSMlogo.jpg",
+    ksiazka: "seminaria/16KSMksiazka.jpg",
+    pdf: "pdf/16KSM.pdf",
+
+    opis: "The 16th Seminar was held in Hel on 20–22 September 2000.",
+    galeria: [
+        "seminaria/16KSM-01.jpg",
+        "seminaria/16KSM-02.jpg",
+        "seminaria/16KSM-03.jpg",
+        "seminaria/16KSM-04.jpg",
+        "seminaria/16KSM-05.jpg"
+]
+},
+
+{
+    id: "XV KSM",
+    nazwa: "XV KSM",
+    rok: "1999",
+    miejsce: "Łódź",
+    lat: 51.775254,
+    lng: 19.482226,
+
+    logo: "seminaria/15KSMlogo.jpg",
+    ksiazka: "seminaria/15KSMksiazka.jpg",
+    pdf: "pdf/15KSM.pdf",
+
+    opis: "The 15th Seminar was held in Łódź in September 1999.",
+    galeria: [
+        "seminaria/15KSM-01.jpg",
+        "seminaria/15KSM-02.jpg",
+        "seminaria/15KSM-03.jpg",
+        "seminaria/15KSM-04.jpg",
+        "seminaria/15KSM-05.jpg"
+]
+},
+
+{
+    id: "XIV KSM",
+    nazwa: "XIV KSM",
+    rok: "1998",
+    miejsce: "Wólka Milanowska",
+    lat: 50.845562,
+    lng: 21.082651,
+
+    logo: "seminaria/14KSMlogo.jpg",
+    ksiazka: "seminaria/14KSMksiazka.jpg",
+    pdf: "pdf/14KSM.pdf",
+
+    opis: "The 14th Seminar was held in Wólka Milanowska in April 1998.",
+    galeria: [
+        "seminaria/14KSM-01.jpg",
+        "seminaria/14KSM-02.jpg",
+        "seminaria/14KSM-03.jpg",
+        "seminaria/14KSM-04.jpg",
+        "seminaria/14KSM-05.jpg"
+]
+}
 
 
 
+];
+
+/* ========================= */
+/* MAPA */
+/* ========================= */
+
+const map = L.map('map', {
+    center: [52.1, 19.3],
+    zoom: 6,
+    scrollWheelZoom: window.innerWidth > 768
+});
+
+L.tileLayer(
+'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+{
+    attribution: '&copy; OpenStreetMap'
+}
+).addTo(map);
+
+const markers = [];
+
+function pokazSeminarium(index){
+
+    const s = seminariaData[index];
+
+    document.getElementById("map")
+    .scrollIntoView({behavior:"smooth"});
+
+    if (s.lat === null || s.lng === null) {
+        return;
+    }
+
+    setTimeout(() => {
+
+        map.setView([s.lat, s.lng], 12);
+
+        if(markers[index]){
+            markers[index].openPopup();
+        }
+
+    }, 500);
+}
+
+const usedPositions = {};
+seminariaData.forEach((s, i) => {
+
+const key = s.miejsce.split(" - ")[0];
+
+    if(!usedPositions[key]){
+        usedPositions[key] = 0;
+    }
+
+    const overlapIndex = usedPositions[key]++;
+
+    const popup = `
+        <div style="text-align:center; max-width:260px;">
+
+            <h3>${s.nazwa}</h3>
+
+            <a href="${s.logo}" class="lightbox">
+                <img src="${s.logo}"
+                style="width:100%; border-radius:8px;">
+            </a>
+
+            <div style="margin-top:12px;">
+
+                <a href="#${s.id}"
+                class="map-btn">
+                Pokaż w tabeli
+                </a>
+
+                <a href="${s.pdf}"
+                target="_blank"
+                class="pdf-btn">
+                PDF
+                </a>
+
+            </div>
+
+        </div>
+    `;
 
 
+const snailIcon = L.divIcon({
+     className: 'custom-snail-marker',
+     html: `
+<div class="snail-marker-wrapper overlap-${overlapIndex}">
+        <img src="${s.logo}" class="snail-marker-icon">
+
+        <div class="snail-marker-year">
+            ${s.rok}
+        </div>
+
+    </div>
+`,
+     iconSize: [50, 50],
+     iconAnchor: [25, 45],
+     popupAnchor: [0, -40]
+ });
+
+if (s.lat !== null && s.lng !== null) {
+
+    const marker = L.marker(
+        [s.lat, s.lng],
+        { icon: snailIcon }
+    )
+
+    .bindPopup(popup)
+    .addTo(map);
+
+    markers.push(marker);
+
+} else {
+
+    markers.push(null);
+
+}
+
+
+});
+
+/* ========================= */
+/* TABELA */
+/* ========================= */
+
+seminariaData.forEach((s, i) => {
+
+    const tr = document.createElement("tr");
+
+    tr.id = s.id;
+
+    tr.innerHTML = `
+
+    <td style="width:35%;">
+
+        <div class="seminar-title">
+
+            ${s.nazwa} (${s.rok})
+
+            <button class="info-btn"
+            onclick="toggleInfo(this)">
+            i
+            </button>
+
+        </div>
+
+        <div class="seminar-info">
+            ${s.opis}
+        </div>
+
+    </td>
+
+    <td style="width:20%; text-align:center;">
+
+        <a href="${s.logo}" class="lightbox">
+
+            <img src="${s.logo}">
+
+        </a>
+
+    </td>
+
+    <td style="width:20%; text-align:center;">
+
+        <a href="${s.pdf}" target="_blank">
+
+            <img src="${s.ksiazka}">
+
+        </a>
+
+    </td>
+
+    <td style="width:25%; text-align:center;">
+
+        <a href="#"
+        class="map-btn"
+        onclick="pokazSeminarium(${i}); return false;">
+        Show on map
+        </a>
+
+    </td>
+
+<td style="width:20%; text-align:center;">
+
+    <a href="#"
+    class="map-btn"
+    onclick="openGallery(${i}); return false;">
+    Photos
+    </a>
+
+</td>
+
+    `;
+
+    document.getElementById("seminaria-body")
+    .appendChild(tr);
+
+});
+
+/* ========================= */
+/* INFO */
+/* ========================= */
+
+function toggleInfo(btn){
+
+    const info = btn.parentElement.nextElementSibling;
+
+    info.style.display =
+    info.style.display === 'block'
+    ? 'none'
+    : 'block';
+
+}
+
+/* ========================= */
+/* LIGHTBOX */
+/* ========================= */
+
+document.addEventListener('click', function(e){
+
+    const link = e.target.closest('a.lightbox');
+
+    if(!link) return;
+
+    e.preventDefault();
+
+    const existing =
+    document.querySelector('.custom-lightbox-overlay');
+
+    if(existing){
+        existing.remove();
+        return;
+    }
+
+    const overlay =
+    document.createElement('div');
+
+    overlay.className =
+    'custom-lightbox-overlay';
+
+    const img =
+    document.createElement('img');
+
+    img.src = link.href;
+
+    overlay.appendChild(img);
+
+    overlay.addEventListener('click',
+    () => overlay.remove());
+
+    document.body.appendChild(overlay);
+
+});
+</script>
+
+<script>
+
+let currentGallery = [];
+let currentIndex = 0;
+
+function openGallery(seminarIndex){
+
+    currentGallery = seminariaData[seminarIndex].galeria;
+    currentIndex = 0;
+
+    renderGallery();
+}
+
+function renderGallery(){
+
+    const old =
+    document.querySelector('.gallery-overlay');
+
+    if(old) old.remove();
+
+    const overlay =
+    document.createElement('div');
+
+    overlay.className = 'gallery-overlay';
+
+    overlay.innerHTML = `
+
+    <div class="gallery-container">
+
+        <img src="${currentGallery[currentIndex]}">
+
+        <div class="gallery-controls">
+
+            <button onclick="prevImage(event)">
+            ◀
+            </button>
+
+            <button onclick="nextImage(event)">
+            ▶
+            </button>
+
+            <button onclick="closeGallery(event)">
+            Close
+            </button>
+
+        </div>
+
+    </div>
+    `;
+
+    overlay.addEventListener('click', (e) => {
+
+        if(e.target === overlay){
+            overlay.remove();
+        }
+
+    });
+
+    document.body.appendChild(overlay);
+}
+
+function nextImage(e){
+
+    e.stopPropagation();
+
+    currentIndex =
+    (currentIndex + 1) % currentGallery.length;
+
+    renderGallery();
+}
+
+function prevImage(e){
+
+    e.stopPropagation();
+
+    currentIndex =
+    (currentIndex - 1 + currentGallery.length)
+    % currentGallery.length;
+
+    renderGallery();
+}
+
+function closeGallery(e){
+
+    e.stopPropagation();
+
+    document
+    .querySelector('.gallery-overlay')
+    .remove();
+}
+
+</script>
 
 </body>
 </html>
